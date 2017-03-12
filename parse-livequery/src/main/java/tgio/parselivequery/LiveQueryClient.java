@@ -209,6 +209,11 @@ public class LiveQueryClient {
         });
     }
 
+    // Check if has active subscriptions
+    public static boolean hasSubscriptions() {
+        return mSubscriptions != null && !mSubscriptions.isEmpty();
+    }
+
     //  Register subscriptions
     public static void registerSubscription(Subscription subscription) {
         mSubscriptions.add(subscription);
